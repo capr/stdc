@@ -5,7 +5,7 @@ local M = setmetatable({C = ffi.C}, {__index = ffi.C})
 
 local function checkh(h)
 	if h ~= nil then return h end
-	error(string.format('errno: %d', ffi.errno))
+	error(string.format('errno: %d', ffi.errno()))
 end
 
 local function str(s)

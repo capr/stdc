@@ -1,4 +1,7 @@
---stdio binding (incomplete)
+
+--stdio binding (incomplete).
+--Written by Cosmin Apreutesei. Public domain.
+
 local ffi = require'ffi'
 require'stdio_h'
 local M = setmetatable({C = ffi.C}, {__index = ffi.C})

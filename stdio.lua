@@ -2,6 +2,9 @@
 --stdio binding (incomplete).
 --Written by Cosmin Apreutesei. Public domain.
 
+--Rationale: although the io.* library exposes FILE* handles, there's
+--no API extension to work with buffers and avoid creating Lua strings.
+
 local ffi = require'ffi'
 require'stdio_h'
 local M = setmetatable({C = ffi.C}, {__index = ffi.C})
